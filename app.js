@@ -1,17 +1,17 @@
-function plus(a,b) {
-    console.log(a+b)
+const calculator = {
+    plus: function(a,b) {
+        console.log(a+b)
+    },
+    minus: function(a,b) {
+        console.log(a-b)
+    },
+    times: function(a,b) {
+        console.log(a*b)
+    },
+    divide: function(a,b) {
+        console.log(a/b)
+    },
+    power: function(a,b) {
+        console.log(a**b)
+    }
 }
-function minus(a,b) {
-    console.log(a-b)
-}
-function mult(a,b) {
-    console.log(a*b)
-}
-function dif(a,b) {
-    console.log(a/b)
-}
-
-plus(10,5)
-minus(10,5)
-mult(10,5)
-dif(10,5)
