@@ -1,17 +1,12 @@
-const calculator = {
-    plus: function(a,b) {
-        console.log(a+b)
-    },
-    minus: function(a,b) {
-        console.log(a-b)
-    },
-    times: function(a,b) {
-        console.log(a*b)
-    },
-    divide: function(a,b) {
-        console.log(a/b)
-    },
-    power: function(a,b) {
-        console.log(a**b)
+const loginInput = document.querySelector("#login-form input")
+const loginButton = document.querySelector("#login-form button")
+
+function onLoginBtnClick(params) {
+    if (loginInput.value === "") {
+        alert("please input your name")
+    } else {
+        console.log("hello", loginInput.value)
     }
 }
+
+loginButton.addEventListener("click", onLoginBtnClick)
