@@ -11,7 +11,7 @@ function handleToDoSubmit(event) {
     saveToDos()
 }
 
-const toDos = []
+let toDos = []
 
 function saveToDos(params) {
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos))
@@ -41,7 +41,6 @@ const savedToDos = localStorage.getItem(TODOS_KEY)
 
 if (savedToDos !== null) {
     const parsedToDos = JSON.parse(savedToDos)
-    parsedToDos.forEach(item => {
-        console.log("this is turns off for ", item)
-    });
+    toDos = parsedToDos
+    parsedToDos.forEach(paintToDo)
 }
