@@ -6,7 +6,15 @@ function handleToDoSubmit(event) {
     event.preventDefault()
     const newTodo = toDoInput.value
     toDoInput.value = ""
+    toDos.push(newTodo)
     paintToDo(newTodo)
+    saveToDos()
+}
+
+const toDos = []
+
+function saveToDos(params) {
+    localStorage.setItem("todos", JSON.stringify(toDos))
 }
 
 function paintToDo(newTodo) {
